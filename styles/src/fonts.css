@@ -1,0 +1,28 @@
+@font-face {
+    font-family: ArialRounded;
+    src: url(../../fonts/Arial_Rounded_Bold.ttf); 
+}
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(../../fonts/HelveticaNeue.ttc); 
+}
+
+@font-face {
+    font-family: RobaLow-Black;
+    src: url(../../fonts/RobaV0.4Low-Black.otf); 
+}
+
+@font-face {
+    font-family: RobaLow-Regular;
+    src: url(../../fonts/RobaV0.4Low-Regular.otf); 
+}
+@font-face {
+    font-family: RobaLow-extraLight;
+    src: url(../../fonts/RobaV0.4High-ExtraLight.otf); 
+}
+
+@font-face {
+    font-family: RobaLow-Bold;
+    src: url(../../fonts/RobaV0.4Low-Regular.otf); 
+}
