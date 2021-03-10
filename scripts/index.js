@@ -118,18 +118,47 @@ function productPopUp() {
 
     const popUpLayout = `
          <div class="popup__item-img">
+         <p class="popup__item-name">${card.name}</p>
           <img src="${card.img}" onerror="this.style.display='none'" alt="">
           </div>
             <div class="popup__item-text">
-              <h3 class="popup__item-title">
-                <span>${card.name}</span> 
-                <span class="popup__item-price">${card.price}</span>
-              </h3>
+              <h3 class="popup__item-title">Menu du jour</h3>
               <p class="popup__item-description">
               <span>${card.description}</span>
               </p>
+              </div>
+                        <div class="popup__adds">
 
+
+            <div class="popup__add popup__add-ingredient">
+              <h3>Accompagnement</h3>
+              <ul class="popup__options">
+                <li class="popup__option">Fresh Potetos</li>
+                <li class="popup__option">Rice</li>
+              </ul>
             </div>
+
+            <div class="popup__add popup__add-ingredient">
+              <h3>Sauces</h3>
+              <ul class="popup__options popup__sauces">
+                <li class="popup__option popup__sauce">Brown sauce</li>
+                <li class="popup__option popup__sauce">Brown sauce</li>
+                <li class="popup__option popup__sauce">Brown sauce</li>
+                <li class="popup__option popup__sauce">Brown sauce</li>
+                <li class="popup__option popup__sauce">Butter sauce</li>
+              </ul>
+            </div>
+
+            <div class="popup__add popup__add-ingredients">
+              <h3>Extra</span></h3>
+              <ul class="popup__options popup__ingredients">
+                <li class="popup__option popup__ingredient">Shrimp +3.-</li>
+                <li class="popup__option popup__ingredient">Extra egg +2.-</li>
+              </ul>
+            </div>
+          </div>
+           <p class="popup__item-price">${card.price}</p>
+
     `;
 
     popUpItem.innerHTML = popUpLayout;
