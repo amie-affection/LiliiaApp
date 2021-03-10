@@ -59,7 +59,7 @@ button {
   max-width: 460px;
   padding: 0 1rem;
   padding-bottom: 1px;
-  margin-bottom: 40px;
+  margin-bottom: 22px;
 }
 .bufer__top {
   position: fixed;
@@ -189,7 +189,7 @@ button {
   z-index: -20;
 }
 .burger-menu.show {
-  top: 20px;
+  top: 0;
 }
 .burger-menu__inner {
   margin: 10rem 0 0;
@@ -232,7 +232,8 @@ button {
   opacity: 0.97;
   z-index: 10;
   transition: var(--transition);
-  border-radius: 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   height: 90%;
 }
 
@@ -520,6 +521,10 @@ button {
   border-radius: 10px;
   background-color: var(--secondColor);
 }
+
+.product__item:last-child {
+  margin: 0;
+}
 .product__item-text {
   pointer-events: none;
   padding: 0.75rem 0.8rem 0.5rem 0.75rem;
@@ -541,8 +546,6 @@ button {
   width: 30px;
   height: 1px;
   background-color: #c4c4c4;
-  /* left: 254px;
-  top: 25px; */
 }
 .product__item-description {
   margin: 0.5rem 0 0;
