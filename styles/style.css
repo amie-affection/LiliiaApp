@@ -50,9 +50,11 @@ button {
   outline: none;
 }
 
-.section__information {
+.section__information,
+.section__help {
   background-color: var(--thirdColor);
   padding-top: 1px;
+  height: 100vh;
 }
 
 .wrapper {
@@ -225,6 +227,8 @@ button {
 /* popup========================================================================================== */
 
 .popup {
+  display: flex;
+  justify-content: center;
   position: fixed;
   bottom: -150%;
   width: 100%;
@@ -698,6 +702,20 @@ button {
   .popup__item-price {
     margin-bottom: 30px;
   }
+
+  .burger-menu__item.info {
+  margin-top: 40px;
+}
+}
+
+@media (min-height: 667px) and (max-height: 735px) {
+  .info__title {
+    margin: 10rem 0 0;
+  }
+
+  .burger-menu__item.info {
+    margin-top: 20px;
+  }
 }
 
 @media (min-height: 736px) {
@@ -710,5 +728,67 @@ button {
 }
 
 @media (min-width: 768px) {
+  .popup {
+    height: 92%;
+    font-size: 25px;
+  }
+
+  .popup__item-text {
+    margin: 5rem 0 0;
+  }
+
+  .popup__add {
+    margin: 3rem 0 0;
+  }
+
+  .popup__item-title,
+  .popup__add > h3 {
+    font-size: 30px;
+  }
+
+  .popup__item-description,
+  .popup__option {
+    font-size: 20px;
+  }
+
+  .wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .popup__sauce,
+  .popup__ingredient {
+    width: 200px;
+    height: 40px;
+  }
+
+  .burger-menu__item {
+    margin-bottom: 100px;
+    width: 350px;
+    height: 80px;
+    font-size: 30px;
+    line-height: 80px;
+  }
+
+  .burger-menu__item:last-child {
+    margin-bottom: 80px;
+  }
+
+  .info__title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+    .info__text > h3 {
+    font-size: 30px;
+  }
+
+  .info__text > p {
+    font-size: 20px;
+  }
+
+  .info__text > p:last-child {
+    margin-bottom: 40px;
+  }
 
 }
