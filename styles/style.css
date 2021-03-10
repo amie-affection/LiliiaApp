@@ -628,6 +628,11 @@ button {
   body {
     font-size: 16px;
   }
+  .bufer__top {
+    height: 4.3rem;
+    background-color: var(--thirdColor);
+    z-index: 1;
+  }
   .logo__text::before {
     top: -8px;
   }
@@ -656,6 +661,14 @@ button {
   .popup__item-description,
   .popup__option {
     font-size: 13px;
+  }
+
+  .info__text > h3 {
+    font-size: 14px;
+  }
+
+  .info__text > p {
+    font-size: 12px;
   }
 }
 
