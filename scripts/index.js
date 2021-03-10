@@ -1,6 +1,6 @@
 import "./burger.js";
 
-window.scroll({behavior: 'smooth'})
+window.scroll({ behavior: "smooth" });
 
 // bottom-menu parser from sections
 function createBottomMenu() {
@@ -8,8 +8,7 @@ function createBottomMenu() {
   const products = document.querySelectorAll(".products");
 
   products.forEach((el) => {
-    const title = el
-      .querySelector(".products__title-text").innerText;
+    const title = el.querySelector(".products__title-text").innerText;
     const item = `
         <li class="bottom__menu-item" data-tap='${el.id}'>
           <a class="bottom__menu-link" href="#${el.id}">${title}</a>
@@ -17,6 +16,13 @@ function createBottomMenu() {
     `;
     root.innerHTML += item;
   });
+  const item = document.querySelector(".bottom__menu-item");
+  item.classList.add("active");
+
+  root.addEventListener("click", function (e) {
+    document.querySelector(".active").classList.remove("active");
+    e.target.classList.add("active");
+  })
 }
 createBottomMenu();
 
@@ -82,10 +88,7 @@ createBottomMenu();
     });
   };
 
-  tapBar.forEach((el) =>
-    el
-      .addEventListener("click", goToHeader)
-  );
+  tapBar.forEach((el) => el.addEventListener("click", goToHeader));
 })();
 
 // product pop-up

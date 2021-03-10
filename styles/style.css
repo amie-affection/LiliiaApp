@@ -596,6 +596,11 @@ button {
   border: 1px solid rgb(211, 211, 211);
   border-radius: 50px;
   background: var(--mainColor);
+  letter-spacing: 1px;
+}
+.bottom__menu-item.active {
+  background-color: var(--firstColor);
+  color: var(--thirdColor)
 }
 .bottom__menu-item:first-child {
   margin: 0 0.8rem 0 0.5rem;
@@ -665,11 +670,11 @@ button {
     margin: 3.5rem 0 0;
   }
 
-    .popup__item-text::after {
+  .popup__item-text::after {
     bottom: -5px;
   }
 
-    .popup__add {
+  .popup__add {
     margin: 1.5rem 0;
   }
 
@@ -686,7 +691,8 @@ button {
   .popup__add-ingredient::after {
     bottom: -8px;
   }
-  .popup__sauce, .popup__ingredient {
+  .popup__sauce,
+  .popup__ingredient {
     margin-bottom: 0;
   }
 
