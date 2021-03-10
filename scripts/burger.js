@@ -7,13 +7,15 @@
     const product = document.querySelectorAll(".products");
     const slider = document.querySelector(".slider");
     const popup = document.querySelector(".popup");
+    const wrapper = document.querySelector(".popup__wrapper");
     const buffer = document.querySelector(".popup__buffer");
 
     slider.classList.remove("blur");
     product.forEach((el) => el.classList.remove("blur"));
     popup.classList.remove("open");
+    wrapper.classList.remove("open");
     buffer.classList.remove("open");
-    document.body.classList.remove('scroll-off')
+    document.body.classList.remove("scroll-off");
   };
 
   const burgerToggle = () => {
