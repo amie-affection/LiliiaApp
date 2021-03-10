@@ -665,6 +665,14 @@ button {
     margin: 3.5rem 0 0;
   }
 
+    .popup__item-text::after {
+    bottom: -5px;
+  }
+
+    .popup__add {
+    margin: 1.5rem 0;
+  }
+
   .popup__item-title,
   .popup__add > h3 {
     font-size: 15px;
@@ -673,6 +681,13 @@ button {
   .popup__item-description,
   .popup__option {
     font-size: 13px;
+  }
+
+  .popup__add-ingredient::after {
+    bottom: -8px;
+  }
+  .popup__sauce, .popup__ingredient {
+    margin-bottom: 0;
   }
 
   .info__text > h3 {
@@ -729,6 +744,10 @@ button {
   }
   .burger-menu__item {
     margin-bottom: 60px;
+  }
+
+  .popup__item-text {
+    margin: 3.2rem 0 0;
   }
 
   .popup__item-price {
