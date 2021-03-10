@@ -655,6 +655,10 @@ button {
     display: none;
   }
 
+  .burger-menu__inner {
+    margin: 14rem 0 0;
+  }
+
   .popup__item-img > img {
     top: -20px;
     right: 15px;
@@ -716,11 +720,15 @@ button {
   .burger-menu__item.info {
     margin-top: 20px;
   }
+
+    .burger-menu__inner {
+    margin: 12rem 0 0;
+  }
 }
 
 @media (min-height: 736px) {
   .burger-menu__inner {
-    margin: 12rem 0 0;
+    margin: 13rem 0 0;
   }
   .burger-menu__item {
     margin-bottom: 60px;
@@ -764,7 +772,7 @@ button {
 
   .burger-menu__item {
     margin-bottom: 100px;
-    width: 350px;
+    width: 450px;
     height: 80px;
     font-size: 30px;
     line-height: 80px;
