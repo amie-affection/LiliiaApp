@@ -500,7 +500,11 @@ button {
 .products {
   transition: var(--transition);
   scroll-margin: 12rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .products__title {
   display: flex;
   flex-direction: row;
@@ -703,4 +707,8 @@ button {
   .burger-menu__item {
     margin-bottom: 60px;
   }
+}
+
+@media (min-width: 768px) {
+
 }
