@@ -637,6 +637,9 @@ button {
   body {
     font-size: 16px;
   }
+  .popup__product {
+    padding: 0 1rem;
+  }
   .bufer__top {
     height: 4.3rem;
     background-color: var(--thirdColor);
