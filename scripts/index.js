@@ -85,7 +85,6 @@ createBottomMenu();
   tapBar.forEach((el) =>
     el
       .addEventListener("click", goToHeader)
-      // .classList.add("products__title-active")
   );
 })();
 
@@ -95,7 +94,7 @@ function productPopUp() {
   const product = document.querySelectorAll(".products");
   const slider = document.querySelector(".slider");
   const popup = document.querySelector(".popup");
-  const wrapper = document.querySelector(".popup__wrapper");
+  // const wrapper = document.querySelector(".popup__wrapper");
   const backBtn = document.querySelector(".popup__btns .back");
   const buffer = document.querySelector(".popup__buffer");
 
@@ -103,7 +102,7 @@ function productPopUp() {
     slider.classList[action]("blur");
     product.forEach((el) => el.classList[action]("blur"));
     popup.classList[action]("open");
-    wrapper.classList[action]("open");
+    // wrapper.classList[action]("open");
     buffer.classList[action]("open");
     document.body.classList[action]("scroll-off");
   };
