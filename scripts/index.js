@@ -104,7 +104,7 @@ function productPopUp() {
   const slider = document.querySelector(".slider");
   const popup = document.querySelector(".popup");
   const wrapper = document.querySelector(".popup__wrapper");
-  const backBtn = document.querySelector(".popup__btns .back");
+  const close = document.querySelector(".popup__close");
   const buffer = document.querySelector(".popup__buffer");
 
   const popUpState = (action) => {
@@ -128,9 +128,9 @@ function productPopUp() {
 
     const popUpLayout = `
          <div class="popup__item-img">
-         <p class="popup__item-name">${card.name}</p>
           <img src="${card.img}" onerror="this.style.display='none'" alt="">
           </div>
+          <h3 class="popup__item-name">${card.name}</h3>
             <div class="popup__item-text">
               <h3 class="popup__item-title">Menu du jour</h3>
               <p class="popup__item-description">
@@ -178,7 +178,7 @@ function productPopUp() {
     creatProductCard(event.target);
     popUpState("add");
 
-    backBtn.addEventListener("click", () => {
+    close.addEventListener("click", () => {
       popUpState("remove");
     });
     buffer.addEventListener("click", () => {
