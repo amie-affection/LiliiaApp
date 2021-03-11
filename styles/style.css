@@ -181,7 +181,7 @@ button {
 .burger-menu {
   position: fixed;
   top: var(--header-height);
-  top: -100%;
+  top: -20%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -189,12 +189,18 @@ button {
   background: var(--thirdColor);
   transition: var(--transition);
   z-index: -20;
+  opacity: 0;
+  pointer-events: none;
 }
 .burger-menu.show {
   top: 0;
+  opacity: 1;
+  pointer-events: all;
 }
 .burger-menu__inner {
   margin: 10rem 0 0;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .burger-menu__item {
   display: flex;
@@ -600,7 +606,7 @@ button {
 }
 .bottom__menu-item.active {
   background-color: var(--firstColor);
-  color: var(--thirdColor)
+  color: var(--thirdColor);
 }
 .bottom__menu-item:first-child {
   margin: 0 0.8rem 0 0.5rem;
@@ -759,6 +765,12 @@ button {
   .popup__item-price {
     margin-bottom: 40px;
     margin-top: 40px;
+  }
+}
+
+@media (min-height: 800px) {
+  .wrapper {
+    margin-bottom: 40px;
   }
 }
 

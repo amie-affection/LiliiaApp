@@ -27,6 +27,11 @@
   };
 
   burger.addEventListener("click", burgerToggle);
+
+  setTimeout(function () {
+    const headerInner = document.querySelector(".header__inner");
+    headerInner.classList.add("show");
+  }, 500);
 })();
 
 //burger height
