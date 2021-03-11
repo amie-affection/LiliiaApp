@@ -2,6 +2,12 @@ import "./burger.js";
 
 window.scroll({ behavior: "smooth" });
 
+window.onscroll = () => {
+  console.log(
+    window.pageYOffset + document.querySelector(".bottom__menu").clientHeight
+  );
+};
+
 // bottom-menu parser from sections
 function createBottomMenu() {
   const root = document.querySelector(".bottom__menu-inner");
@@ -22,7 +28,7 @@ function createBottomMenu() {
   root.addEventListener("click", function (e) {
     document.querySelector(".active").classList.remove("active");
     e.target.classList.add("active");
-  })
+  });
 }
 createBottomMenu();
 
@@ -83,7 +89,7 @@ createBottomMenu();
     products.forEach((el) => {
       if (el.id == element) {
         const topElCord = el.getBoundingClientRect().top + pageYOffset;
-        window.scrollTo({ top: topElCord - 75, left: 0, behavior: "smooth" });
+        window.scrollTo({ top: topElCord - 225, left: 0, behavior: "smooth" });
       }
     });
   };
