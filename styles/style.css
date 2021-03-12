@@ -837,6 +837,7 @@ button {
 
 .slider__inner::-webkit-scrollbar {
   width: 1px;
+  height: 12px;
 }
 
 .slider__inner::-webkit-scrollbar-thumb {
