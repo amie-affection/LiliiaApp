@@ -1,27 +1,13 @@
 // burger menu
 (function burgerActions() {
   const burger = document.querySelector('.burger');
+  const body = document.querySelector('body');
   const burgerMenu = document.querySelector('.burger-menu');
-
-  const closePopUp = () => {
-    const product = document.querySelectorAll('.products');
-    const slider = document.querySelector('.slider');
-    const popup = document.querySelector('.popup');
-    const buffer = document.querySelector('.popup__buffer');
-
-    slider.classList.remove('blur');
-    product.forEach((el) => el.classList.remove('blur'));
-    popup.classList.remove('open');
-    buffer.classList.remove('open');
-    document.body.classList.remove('scroll-off');
-  };
 
   const burgerToggle = () => {
     burger.classList.toggle('show');
     burgerMenu.classList.toggle('show');
-
-    //close pop-up if open
-    closePopUp();
+    document.body.classList.toggle('scroll-off');
   };
 
   burger.addEventListener('click', burgerToggle);
