@@ -1,20 +1,18 @@
-import "./burger.js";
+import './burger.js';
 
-window.scroll({ behavior: "smooth" });
+window.scroll({ behavior: 'smooth' });
 
-window.onscroll = () => {
-  console.log(
-    window.pageYOffset + document.querySelector(".bottom__menu").clientHeight
-  );
-};
+// window.onscroll = () => {
+//   console.log(window.pageYOffset + document.querySelector('.bottom__menu').clientHeight);
+// };
 
 // bottom-menu parser from sections
 function createBottomMenu() {
-  const root = document.querySelector(".bottom__menu-inner");
-  const products = document.querySelectorAll(".products");
+  const root = document.querySelector('.bottom__menu-inner');
+  const products = document.querySelectorAll('.products');
 
   products.forEach((el) => {
-    const title = el.querySelector(".products__title-text").innerText;
+    const title = el.querySelector('.products__title-text').innerText;
     const item = `
         <li class="bottom__menu-item" data-tap='${el.id}'>
           <a class="bottom__menu-link" href="#${el.id}">${title}</a>
@@ -22,13 +20,13 @@ function createBottomMenu() {
     `;
     root.innerHTML += item;
   });
-  const item = document.querySelector(".bottom__menu-item");
-  item.classList.add("active");
+  const item = document.querySelector('.bottom__menu-item');
+  item.classList.add('active');
 
-  root.addEventListener("click", function (e) {
-    document.querySelector(".active").classList.remove("active");
-    e.target.classList.add("active");
-  });
+  // root.addEventListener('click', function (e) {
+  //   document.querySelector('.active').classList.remove('active');
+  //   e.target.classList.add('active');
+  // });
 }
 createBottomMenu();
 
@@ -46,84 +44,83 @@ createBottomMenu();
 // };
 // wave.size();
 
-// // scroll methods
-// const scroll = {
-//   bars: document.querySelectorAll(".tap-bar__item"),
-//   products: document.querySelectorAll(".products"),
+// scroll methods
+const scroll = {
+  bars: document.querySelectorAll('.bottom__menu-item'),
+  products: document.querySelectorAll('.products'),
 
-//   remove: function () {
-//     this.bars.forEach((el) => el.classList.remove("tap"));
-//   },
+  remove: function () {
+    this.bars.forEach((el) => el.classList.remove('active'));
+  },
 
-//   chose: function (num) {
-//     this.remove();
-//     this.bars[num].classList.add("tap");
-//     wave.position();
-//   },
+  chose: function (num) {
+    this.remove();
+    this.bars[num].classList.add('active');
+  },
 
-//   scrollBar: function () {
-//     scroll.products.forEach((el, index) => {
-//       const elSize = el.getBoundingClientRect();
-//       const docHeight = document.documentElement.clientHeight;
-//       const coordinate = window.pageYOffset + docHeight / 1.5;
-//       const topElCord = elSize.top + pageYOffset;
-//       const botElCord = elSize.top + pageYOffset + elSize.height;
+  scrollBar: function () {
+    scroll.products.forEach((el, index) => {
+      const elSize = el.getBoundingClientRect();
+      const docHeight = document.documentElement.clientHeight;
+      const coordinate = window.pageYOffset + docHeight / 1.5;
+      const topElCord = elSize.top + pageYOffset;
+      const botElCord = elSize.top + pageYOffset + elSize.height;
 
-//       if (coordinate > topElCord && coordinate < botElCord) {
-//         scroll.chose(index);
-//       }
-//     });
-//   },
-// };
-// document.addEventListener("scroll", scroll.scrollBar);
+      if (coordinate > topElCord && coordinate < botElCord) {
+        scroll.chose(index);
+      }
+    });
+  },
+};
+document.addEventListener('scroll', scroll.scrollBar);
 
 // tap scroll to
 (function scrollTo() {
-  const tapBar = document.querySelectorAll(".bottom__menu-item");
-  const products = document.querySelectorAll(".products");
+  const tapBar = document.querySelectorAll('.bottom__menu-item');
+  const products = document.querySelectorAll('.products');
 
   const goToHeader = (event) => {
     event.preventDefault();
-    const element = event.target.getAttribute("data-tap");
+    const element = event.target.getAttribute('data-tap');
 
     products.forEach((el) => {
       if (el.id == element) {
         const topElCord = el.getBoundingClientRect().top + pageYOffset;
-        window.scrollTo({ top: topElCord - 225, left: 0, behavior: "smooth" });
+        window.scrollTo({ top: topElCord - 225, left: 0, behavior: 'smooth' });
       }
     });
   };
 
-  tapBar.forEach((el) => el.addEventListener("click", goToHeader));
+  tapBar.forEach((el) => el.addEventListener('click', goToHeader));
 })();
 
 // product pop-up
 function productPopUp() {
-  const products = document.querySelectorAll(".product__item");
-  const product = document.querySelectorAll(".products");
-  const slider = document.querySelector(".slider");
-  const popup = document.querySelector(".popup");
-  const wrapper = document.querySelector(".popup__wrapper");
-  const close = document.querySelector(".popup__close");
-  const buffer = document.querySelector(".popup__buffer");
+  const products = document.querySelectorAll('.product__item');
+  const product = document.querySelectorAll('.products');
+  const slider = document.querySelector('.slider');
+  const popup = document.querySelector('.popup');
+  const wrapper = document.querySelector('.popup__wrapper');
+  const close = document.querySelector('.popup__close');
+  const buffer = document.querySelector('.popup__buffer');
 
   const popUpState = (action) => {
-    slider.classList[action]("blur");
-    product.forEach((el) => el.classList[action]("blur"));
-    popup.classList[action]("open");
-    wrapper.classList[action]("open");
-    buffer.classList[action]("open");
-    document.body.classList[action]("scroll-off");
+    slider.classList[action]('blur');
+    product.forEach((el) => el.classList[action]('blur'));
+    popup.classList[action]('open');
+    wrapper.classList[action]('open');
+    buffer.classList[action]('open');
+    document.body.classList[action]('scroll-off');
   };
 
   const creatProductCard = (obj) => {
-    const popUpItem = document.querySelector(".popup__product");
+    const popUpItem = document.querySelector('.popup__product');
 
     const card = {
-      img: obj.querySelector(".product__item-img>img").src,
-      name: obj.querySelector(".product__item-title>span").innerText,
-      price: obj.querySelector(".product__item-price").innerText,
-      description: obj.querySelector(".product__item-description").innerText,
+      img: obj.querySelector('.product__item-img>img').src,
+      name: obj.querySelector('.product__item-title>span').innerText,
+      price: obj.querySelector('.product__item-price').innerText,
+      description: obj.querySelector('.product__item-description').innerText,
     };
 
     const popUpLayout = `
@@ -176,16 +173,16 @@ function productPopUp() {
 
   const popUp = (event) => {
     creatProductCard(event.target);
-    popUpState("add");
+    popUpState('add');
 
-    close.addEventListener("click", () => {
-      popUpState("remove");
+    close.addEventListener('click', () => {
+      popUpState('remove');
     });
-    buffer.addEventListener("click", () => {
-      popUpState("remove");
+    buffer.addEventListener('click', () => {
+      popUpState('remove');
     });
   };
 
-  products.forEach((el) => el.addEventListener("click", popUp));
+  products.forEach((el) => el.addEventListener('click', popUp));
 }
 productPopUp();
