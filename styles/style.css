@@ -1,4 +1,4 @@
-@import "./src/fonts.css";
+@import './src/fonts.css';
 
 :root {
   --header-height: 4rem;
@@ -13,6 +13,8 @@
   --btn-padding: 0.9rem 2.5rem 0.5rem 2.5rem;
 
   --transition: 0.25s linear;
+
+  --null-transition: none !important;
 }
 
 * {
@@ -22,15 +24,13 @@
 }
 html {
   font-size: 16px;
-  max-width: 768px;
   margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
 }
 body {
   font-family: var(--mainFont);
   font-size: 18px;
   background: var(--mainColor);
-  max-width: 768px;
 }
 body.scroll-off {
   overflow: hidden;
@@ -78,7 +78,6 @@ button {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  max-width: 768px;
   margin: 0 auto;
   font-size: 3rem;
   font-family: RobaLow-extraLight;
@@ -95,8 +94,12 @@ button {
   box-shadow: var(--second-shadow);
 }
 
-.blur {
-  filter: blur(5px);
+.preload-transitions * {
+  -webkit-transition: var(--null-transition);
+  -moz-transition: var(--null-transition);
+  -ms-transition: var(--null-transition);
+  -o-transition: var(--null-transition);
+  transition: var(--null-transition);
 }
 
 /* header========================================================================================== */
@@ -153,7 +156,7 @@ button {
 }
 
 .burger > span::before {
-  content: ".";
+  content: '.';
   position: absolute;
   font-size: 30px;
   top: -21.5px;
@@ -185,10 +188,8 @@ button {
   position: fixed;
   top: var(--header-height);
   top: -20%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 100%;
-  max-width: 768px;
   height: 100%;
   overflow: hidden;
   background: var(--thirdColor);
@@ -201,7 +202,6 @@ button {
   top: 0;
   opacity: 1;
   pointer-events: all;
-  max-width: 768px;
 }
 .burger-menu__inner {
   margin: 10rem 0 0;
@@ -242,9 +242,8 @@ button {
   display: flex;
   justify-content: center;
   position: fixed;
-  bottom: -150%;
+  bottom: -20%;
   width: 100%;
-  max-width: 768px;
   background-color: #ededed;
   opacity: 0.97;
   z-index: 10;
@@ -252,10 +251,14 @@ button {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   height: 83%;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .popup.open {
   bottom: 0;
+  opacity: 1;
+  pointer-events: all;
 }
 
 .popup__close {
@@ -274,16 +277,21 @@ button {
   padding-top: 35px;
 }
 .popup__buffer {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
   position: fixed;
-  top: var(--header-height);
+  top: 0;
   width: 100vw;
   height: 100%;
   z-index: 10;
-  opacity: 0;
+  transition: var(--transition);
 }
 .popup__buffer.open {
-  display: unset;
+  opacity: 1;
+  pointer-events: all;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
 }
 
 .popup__product {
@@ -294,7 +302,7 @@ button {
   position: relative;
 }
 .popup__item-text::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 1px;
@@ -365,7 +373,7 @@ button {
 }
 
 .popup__add-ingredient::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 1px;
@@ -399,7 +407,7 @@ button {
 
 .bottom__menu::after,
 .slider__inner::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 15px;
   width: 90%;
@@ -442,16 +450,12 @@ button {
   border-radius: 20px;
   filter: blur(2px);
 }
-.slider__item-img:not([src=""]) + .slider__item-gradient {
+.slider__item-img:not([src='']) + .slider__item-gradient {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 2;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0) 50.52%,
-    rgba(0, 0, 0, 0.75) 100%
-  );
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.52%, rgba(0, 0, 0, 0.75) 100%);
   border-radius: 20px;
 }
 .slider__title {
@@ -534,7 +538,7 @@ button {
   position: absolute;
   top: 10px;
   left: -50px;
-  content: "";
+  content: '';
   width: 30px;
   height: 1px;
   background-color: #c4c4c4;
@@ -561,7 +565,6 @@ button {
   position: fixed;
   padding-top: 4.8rem;
   width: 100%;
-  max-width: 768px;
   z-index: 5;
   background-color: var(--mainColor);
 }
@@ -572,7 +575,7 @@ button {
   padding: 0.5rem 0;
 }
 .bottom__menu-inner::after {
-  content: "";
+  content: '';
   width: 1px;
   height: 1px;
   padding: 0 0.5rem 0 0;
@@ -828,7 +831,7 @@ button {
   }
 }
 
-@media (min-width: 769px) {
+/* @media (min-width: 769px) {
   html {
     border: 10px solid black;
     border-top: 50px solid;
@@ -853,4 +856,4 @@ button {
   .info__title {
     margin-top: 4rem;
   }
-}
+} */

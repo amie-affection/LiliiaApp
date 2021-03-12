@@ -2,9 +2,10 @@ import './burger.js';
 
 window.scroll({ behavior: 'smooth' });
 
-// window.onscroll = () => {
-//   console.log(window.pageYOffset + document.querySelector('.bottom__menu').clientHeight);
-// };
+document.addEventListener('DOMContentLoaded', function () {
+  let node = document.querySelector('.preload-transitions');
+  node.classList.remove('preload-transitions');
+});
 
 // bottom-menu parser from sections
 function createBottomMenu() {
@@ -22,27 +23,8 @@ function createBottomMenu() {
   });
   const item = document.querySelector('.bottom__menu-item');
   item.classList.add('active');
-
-  // root.addEventListener('click', function (e) {
-  //   document.querySelector('.active').classList.remove('active');
-  //   e.target.classList.add('active');
-  // });
 }
 createBottomMenu();
-
-// //wave methods
-// const wave = {
-//   wave: document.querySelector(".wave-wrap"),
-//   size: function () {
-//     const elWidth = document.querySelector(".tap-bar__item").clientWidth;
-//     this.wave.style.width = elWidth + "px";
-//   },
-//   position: function () {
-//     const activeElement = document.querySelector(".tap-bar__item.tap");
-//     this.wave.style.left = activeElement.offsetLeft + "px";
-//   },
-// };
-// wave.size();
 
 // scroll methods
 const scroll = {
@@ -97,15 +79,11 @@ document.addEventListener('scroll', scroll.scrollBar);
 // product pop-up
 function productPopUp() {
   const products = document.querySelectorAll('.product__item');
-  const product = document.querySelectorAll('.products');
-  const slider = document.querySelector('.slider');
   const popup = document.querySelector('.popup');
   const close = document.querySelector('.popup__close');
   const buffer = document.querySelector('.popup__buffer');
 
   const popUpState = (action) => {
-    slider.classList[action]('blur');
-    product.forEach((el) => el.classList[action]('blur'));
     popup.classList[action]('open');
     buffer.classList[action]('open');
     document.body.classList[action]('scroll-off');
