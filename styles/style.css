@@ -837,18 +837,22 @@ button {
 
 .slider__inner::-webkit-scrollbar {
   width: 1px;
-  height: 12px;
+  height: 5px;
 }
 
 .slider__inner::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: var(--firstColor);
+  background-color: #D3D3D3;
 }
 
 .slider__inner::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
   border-radius: 10px;
   background-color: #f9f9fd;
+}
+
+.products__title {
+  margin-top: 32px;
 }
   /* html {
     border: 10px solid black;
