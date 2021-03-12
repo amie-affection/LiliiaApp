@@ -830,8 +830,26 @@ button {
   }
 }
 
-/* @media (min-width: 769px) {
-  html {
+@media (min-width: 769px) {
+.bottom__menu-inner::-webkit-scrollbar {
+  width: 0;
+}
+
+.slider__inner::-webkit-scrollbar {
+  width: 1px;
+}
+
+.slider__inner::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--firstColor);
+}
+
+.slider__inner::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background-color: #f9f9fd;
+}
+  /* html {
     border: 10px solid black;
     border-top: 50px solid;
     border-bottom: 150px;
@@ -854,5 +872,5 @@ button {
 
   .info__title {
     margin-top: 4rem;
-  }
-} */
+  } */
+}
