@@ -912,7 +912,7 @@ button {
 
   .popup {
     width: 466px;
-    top: 23.5%;
+    /* top: 23.5%; */
   }
 
   .popup__buffer.open {
