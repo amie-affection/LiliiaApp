@@ -910,15 +910,18 @@ button {
     display: none;
   }
 
-  .popup,
-  .popup__buffer.open {
-    width: 468px;
+  .popup {
+    width: 466px;
     top: 23.5%;
-    height: 65%;
+  }
+
+  .popup__buffer.open {
+    width: 466px;
+    top: 5%;
   }
 
   .popup__item-name {
-    margin-top: 40px;
+    margin-top: 70px;
   }
 
   .popup__add {
