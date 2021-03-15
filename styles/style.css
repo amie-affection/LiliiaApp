@@ -991,10 +991,6 @@ button {
     height: 100vh;
     overflow: scroll;
   }
-  .header {
-    position: sticky;
-    width: 100%;
-  }
   body {
     position: fixed;
     width: 500px;
@@ -1002,5 +998,19 @@ button {
     border: 16px solid black;
     border-radius: 20px;
     overflow: scroll;
+  }
+  .header {
+    position: sticky;
+    width: 100%;
+  }
+
+  .burger,
+  .product__item,
+  .bottom__menu-item,
+  .burger-menu__item {
+    cursor: pointer;
+  }
+  .bottom__menu::after, .bottom__menu::after, .slider__inner::after {
+    display: none;
   }
 }
