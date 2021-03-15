@@ -52,6 +52,7 @@ button {
   background: none;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .section__information,
@@ -847,6 +848,11 @@ button {
 }
 
 @media (min-width: 769px) {
+  .header {
+    width: 468px;
+    position: fixed;
+  }
+
   .bottom__menu-inner {
     padding-top: 1.5rem;
     padding-bottom: 0;
@@ -923,6 +929,11 @@ button {
     margin-bottom: 0;
     height: 25px;
   }
+
+  .section__information {
+    width: 468px;
+    position: fixed;
+  }
 }
 
 @media (min-width: 920px) {
@@ -943,5 +954,9 @@ button {
     overflow-y: scroll;
     border: 16px solid black;
     border-radius: 20px;
+  }
+
+  .bottom__menu-inner {
+    overflow-x: scroll;
   }
 }
