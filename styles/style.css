@@ -576,7 +576,7 @@ button {
 .bottom__menu-inner {
   overflow-y: scroll;
   display: flex;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
 }
 .bottom__menu-inner::after {
   content: "";
@@ -658,10 +658,6 @@ button {
 
   .burger-menu__inner {
     margin: 12.8rem 0 0;
-  }
-
-  .bottom__menu-inner {
-    padding: 1rem 0;
   }
 
   .bottom__menu-item {
