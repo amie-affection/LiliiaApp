@@ -661,7 +661,7 @@ button {
   }
 
   .bottom__menu-inner {
-       padding: 1rem 0;
+    padding: 1rem 0;
   }
 
   .bottom__menu-item {
@@ -853,6 +853,25 @@ button {
     position: fixed;
   }
 
+  .burger-menu__inner {
+    margin: 15rem 0 0;
+  }
+
+  .burger-menu__item {
+    margin-bottom: 60px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+  }
+
+  .lang {
+    width: 400px;
+  }
+
+  .lang__item {
+    cursor: pointer;
+  }
+
   .bottom__menu-inner {
     padding-top: 1.5rem;
     padding-bottom: 0;
@@ -917,7 +936,7 @@ button {
 
   .popup__item-text {
     margin: 1.2rem 0 0;
-}
+  }
 
   .popup__item-description,
   .popup__option {
@@ -930,9 +949,36 @@ button {
     height: 25px;
   }
 
-  .section__information {
-    width: 468px;
-    position: fixed;
+  .info__title {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  .info__text > h3 {
+    font-size: 25px;
+  }
+
+  .info__text > p {
+    font-size: 18px;
+  }
+
+  .info__text > p:last-child {
+    margin-bottom: 20px;
+  }
+
+  .section__information,
+  .section__help {
+    height: auto;
+  }
+
+  .burger-menu__item:last-child {
+    margin-bottom: 30px;
+  }
+
+  .burger-menu__item {
+    width: 350px;
+    height: 60px;
+    line-height: 60px;
   }
 }
 
@@ -951,7 +997,7 @@ button {
   }
   body {
     position: fixed;
-    width: 400px;
+    width: 500px;
     height: 700px;
     border: 16px solid black;
     border-radius: 20px;
