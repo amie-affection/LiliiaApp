@@ -15,6 +15,8 @@
   --transition: 0.25s linear;
 
   --null-transition: none !important;
+
+  --pop-up-width: 464px;
 }
 
 * {
@@ -911,13 +913,25 @@ button {
   }
 
   .popup {
-    width: 466px;
-    /* top: 23.5%; */
+    width: var(--pop-up-width);
+    height: 70%;
+    bottom: -10%;
+  }
+
+  .popup__buffer {
+    width: 100vw;
+    top: 0;
+    left: 0;
+  }
+
+  body.scroll-off {
+    border-color: var(--mainColor);
+    
+    box-shadow: 0;
   }
 
   .popup__buffer.open {
-    width: 466px;
-    top: 5%;
+    /* top: 5%; */
   }
 
   .popup__item-name {
@@ -989,6 +1003,7 @@ button {
     border-left: .5rem solid black;
     border-right: 0.5rem solid black;
     border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
   }
   .header {
     position: sticky;
