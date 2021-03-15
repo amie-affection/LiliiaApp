@@ -659,6 +659,18 @@ button {
     margin: 12.8rem 0 0;
   }
 
+  .bottom__menu-inner {
+       padding: 1rem 0;
+  }
+
+  .bottom__menu-item {
+    font-size: 12px;
+  }
+
+  .bottom__menu::after {
+    margin-top: 0;
+  }
+
   .popup__item-img > img {
     width: 80px;
     height: 80px;
@@ -877,10 +889,39 @@ button {
     display: none;
   }
 
-  .popup {
-    width: 466px;
-    top: 23%;
+  .popup,
+  .popup__buffer.open {
+    width: 468px;
+    top: 23.5%;
     height: 65%;
+  }
+
+  .popup__item-name {
+    margin-top: 40px;
+  }
+
+  .popup__add {
+    margin-top: 2rem;
+  }
+
+  .popup__item-title,
+  .popup__add > h3 {
+    font-size: 15px;
+  }
+
+  .popup__item-text {
+    margin: 1.2rem 0 0;
+}
+
+  .popup__item-description,
+  .popup__option {
+    font-size: 13px;
+  }
+
+  .popup__sauce,
+  .popup__ingredient {
+    margin-bottom: 0;
+    height: 25px;
   }
 }
 

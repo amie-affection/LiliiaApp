@@ -68,7 +68,7 @@ document.addEventListener('scroll', scroll.scrollBar);
     products.forEach((el) => {
       if (el.id == element) {
         const topElCord = el.getBoundingClientRect().top + pageYOffset;
-        window.scrollTo({ top: topElCord - 225, left: 0, behavior: 'smooth' });
+        window.scrollTo({ top: topElCord - 125, left: 0, behavior: 'smooth' });
       }
     });
   };
