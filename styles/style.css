@@ -937,26 +937,24 @@ button {
 }
 
 @media (min-width: 920px) {
-  body {
+  html {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
+    overflow: scroll;
   }
   .header {
     position: sticky;
+    width: 100%;
   }
-  .app {
+  body {
     position: fixed;
-    width: 500px;
-    height: 80vh;
-    overflow-y: scroll;
+    width: 400px;
+    height: 700px;
     border: 16px solid black;
     border-radius: 20px;
-  }
-
-  .bottom__menu-inner {
-    overflow-x: scroll;
+    overflow: scroll;
   }
 }
