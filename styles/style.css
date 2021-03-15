@@ -16,7 +16,7 @@
 
   --null-transition: none !important;
 
-  --pop-up-width: 464px;
+  --pop-up-width: 480px;
 }
 
 * {
@@ -914,7 +914,8 @@ button {
 
   .popup {
     width: var(--pop-up-width);
-    height: 70%;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+
     bottom: -10%;
   }
 
@@ -926,7 +927,7 @@ button {
 
   body.scroll-off {
     border-color: var(--mainColor);
-    
+
     box-shadow: 0;
   }
 
@@ -1000,7 +1001,7 @@ button {
     max-width: 30rem;
     margin: 2rem auto;
     border: 1rem solid black;
-    border-left: .5rem solid black;
+    border-left: 0.5rem solid black;
     border-right: 0.5rem solid black;
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
@@ -1016,7 +1017,9 @@ button {
   .burger-menu__item {
     cursor: pointer;
   }
-  .bottom__menu::after, .bottom__menu::after, .slider__inner::after {
+  .bottom__menu::after,
+  .bottom__menu::after,
+  .slider__inner::after {
     display: none;
   }
 }
