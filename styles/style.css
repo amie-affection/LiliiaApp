@@ -713,11 +713,11 @@ button {
 
 @media (min-width: 414px) {
   .popup__item-name {
-    margin-top: 50px;
+    margin-top: 80px;
   }
-.popup {
-  height: 88%;
-}
+  .popup {
+    height: 88%;
+  }
 
   .popup__item-title,
   .popup__add > h3 {
