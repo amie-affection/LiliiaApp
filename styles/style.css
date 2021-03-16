@@ -273,6 +273,7 @@ button {
   position: absolute;
   top: 3.5%;
   right: 6%;
+  z-index: 1000;
 }
 
 .popup__close::before {
@@ -337,10 +338,14 @@ button {
 .popup__item-img {
   display: flex;
   justify-content: space-around;
+  height: 110px;
+  width: 110px;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .popup__item-img > img {
-  position: absolute;
-  top: -20px;
   object-fit: cover;
   height: 110px;
   width: 110px;
@@ -657,7 +662,7 @@ button {
     height: 2px;
   }
 
- .product__item-price::before {
+  .product__item-price::before {
     display: none;
   }
 
@@ -719,6 +724,10 @@ button {
   }
   .popup {
     height: 88%;
+  }
+
+  .popup__item-img {
+    top: -80px;
   }
 
   .popup__item-title,
