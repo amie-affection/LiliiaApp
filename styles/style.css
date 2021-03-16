@@ -720,7 +720,7 @@ button {
 
 @media (min-width: 414px) {
   .popup__item-name {
-    margin-top: 80px;
+    margin-top: 50px;
   }
   .popup {
     height: 88%;
