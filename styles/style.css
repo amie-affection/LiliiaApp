@@ -712,23 +712,29 @@ button {
 }
 
 @media (min-width: 414px) {
+  .popup__item-name {
+    margin-top: 50px;
+  }
   .popup__item-text {
-    margin: 3rem 0 0;
+    /* margin: 3rem 0 0; */
   }
 
   .popup__item-title,
   .popup__add > h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .popup__item-description,
   .popup__option {
-    font-size: 17px;
+    font-size: 14px;
   }
 
-  .popup__options,
-  .popup__item-price {
-    margin-bottom: 30px;
+  .popup__add {
+    margin: 1.4rem 0;
+  }
+
+  .popup__add-ingredient::after {
+    bottom: -10px;
   }
 
   .burger-menu__item.info {
