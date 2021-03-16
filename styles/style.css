@@ -160,7 +160,7 @@ button {
   position: relative;
 }
 
-.burger > span::before {
+/* .burger > span::before {
   content: ".";
   position: absolute;
   height: 3px;
@@ -168,7 +168,7 @@ button {
   top: -12px;
   left: -8px;
   color: var(--firstColor);
-}
+} */
 
 .logo {
   justify-content: center;
@@ -277,6 +277,7 @@ button {
 
 .popup__close::before {
   content: url(../images/svg/close.svg);
+  pointer-events: none;
 }
 .popup__inner {
   margin: 0 0 1rem;
@@ -655,7 +656,7 @@ button {
     height: 2px;
   }
 
-  .burger > span::before {
+ .product__item-price::before {
     display: none;
   }
 
