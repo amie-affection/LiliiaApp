@@ -16,7 +16,7 @@
 
   --null-transition: none !important;
 
-  --pop-up-width: 480px;
+  --pop-up-width: 472px;
 }
 
 * {
@@ -937,10 +937,6 @@ button {
     border-color: var(--mainColor);
 
     box-shadow: 0;
-  }
-
-  .popup__buffer.open {
-    /* top: 5%; */
   }
 
   .popup__item-name {
