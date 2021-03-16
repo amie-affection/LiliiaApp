@@ -278,6 +278,7 @@ button {
 .popup__close::before {
   content: url(../images/svg/close.svg);
   pointer-events: none;
+  z-index: 15;
 }
 .popup__inner {
   margin: 0 0 1rem;
@@ -578,7 +579,7 @@ button {
 }
 
 .bottom__menu-inner {
-  overflow-y: scroll;
+  overflow-x: scroll;
   display: flex;
   padding: 1rem 0;
 }
