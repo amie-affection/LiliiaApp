@@ -765,6 +765,10 @@ button {
   .burger-menu__inner {
     margin: 10rem 0 0;
   }
+
+  .popup {
+    height: 86%;
+  }
 }
 
 @media (min-height: 736px) {
