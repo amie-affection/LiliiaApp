@@ -715,9 +715,9 @@ button {
   .popup__item-name {
     margin-top: 50px;
   }
-  .popup__item-text {
-    /* margin: 3rem 0 0; */
-  }
+.popup {
+  height: 88%;
+}
 
   .popup__item-title,
   .popup__add > h3 {
