@@ -678,6 +678,10 @@ button {
     margin-top: 0;
   }
 
+  .popup {
+    height: 92%;
+  }
+
   .popup__item-img > img {
     width: 80px;
     height: 80px;
