@@ -786,7 +786,6 @@ button {
   .popup__item-price {
     margin-top: 20px;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -854,9 +853,19 @@ button {
 }
 
 @media (min-width: 769px) {
+  body {
+    max-width: 30rem;
+    margin: 2rem auto;
+    border: 1rem solid black;
+    border-left: 0.5rem solid black;
+    border-right: 0.5rem solid black;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+  }
+
   .header {
-    width: 468px;
-    position: fixed;
+    position: sticky;
+    width: 100%;
   }
 
   .burger-menu__inner {
@@ -997,22 +1006,6 @@ button {
     width: 350px;
     height: 60px;
     line-height: 60px;
-  }
-}
-
-@media (min-width: 920px) {
-  body {
-    max-width: 30rem;
-    margin: 2rem auto;
-    border: 1rem solid black;
-    border-left: 0.5rem solid black;
-    border-right: 0.5rem solid black;
-    border-radius: 1rem;
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
-  }
-  .header {
-    position: sticky;
-    width: 100%;
   }
 
   .burger,
