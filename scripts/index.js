@@ -1,5 +1,22 @@
 import './burger.js';
 
+// script for unzoom on the page-card
+
+var lastTouchEnd = 0;
+document.addEventListener(
+  "dblclick",
+  function (event) {
+    var now = new Date().getTime();
+    if (now - lastTouchEnd <= 300) {
+      event.preventDefault();
+    }
+    lastTouchEnd = now;
+  },
+  false
+);
+
+//
+
 window.scroll({ behavior: 'smooth' });
 
 document.addEventListener('DOMContentLoaded', function () {
