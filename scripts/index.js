@@ -117,14 +117,12 @@ function showModal() {
 
   const showCard = (object) => {
     const modalItem = document.querySelector(".modal__window");
-    const name = document.querySelector(".slider__description").innerText;
 
-    console.log(name);
+    console.dir(object);
 
     const card = {
-      img: object.src,
-      // name: object.querySelector(".slider__description"),
-      // description: obj.querySelector(".product__item-description").innerText,
+      img: object.firstElementChild.currentSrc,
+      name: object.innerText,
     };
 
     const modalLayout = `
@@ -138,7 +136,7 @@ function showModal() {
       </div>
 
       <div>
-        <h3 class="modal__title">${name}</h3>
+        <h3 class="modal__title">${card.name}</h3>
         <p class="modal__description">${card.description}</p>
       </div>
     `;
@@ -147,7 +145,7 @@ function showModal() {
   };
 
   const openModal = (event) => {
-    showCard(event.target);
+    showCard(event.currentTarget);
     modalState("add");
 
     modalBuffer.addEventListener("click", () => {

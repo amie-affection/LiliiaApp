@@ -533,7 +533,7 @@ button {
   object-position: bottom;
   z-index: 1;
   border-radius: 20px;
-  filter: blur(2px);
+  /* filter: blur(2px); */
 }
 
 .slider__item-img:not([src=""]) + .slider__item-gradient {
@@ -754,7 +754,12 @@ button {
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
-  object-fit: contain;
+}
+
+.modal__window-img > img {
+  object-fit: cover;
+  object-position: bottom;
+
 }
 
 .modal__close {
