@@ -103,6 +103,7 @@ function showModal() {
   const slider = document.querySelector(".slider");
   const products = document.querySelector(".products");
   const sliderInner = document.querySelector(".slider__inner");
+  const after = document.querySelector(".body__after");
 
   const modalState = (action) => {
     modal.classList[action]("show");
@@ -112,20 +113,23 @@ function showModal() {
     slider.classList.add("blur");
     products.classList.add("blur");
     sliderInner.classList.add("show");
+    after.classList.add("unshow");
     document.body.classList[action]("scroll-off");
+    document.body.classList.add("unshadow");
   };
 
   const showCard = (object) => {
     const modalItem = document.querySelector(".modal__window");
 
-    console.dir(object);
-
     const card = {
       img: object.firstElementChild.currentSrc,
-      name: object.innerText,
+      name: object.querySelector(".slider__title>h4").innerText,
+      description: object.querySelector(".slider__title>p").innerText,
     };
 
     const modalLayout = `
+    <button class="popup__close modal__close"></button>
+
       <div class="modal__window-img">
         <img
           src="${card.img}"
@@ -155,6 +159,8 @@ function showModal() {
       slider.classList.remove("blur");
       products.classList.remove("blur");
       sliderInner.classList.remove("show");
+      after.classList.remove("unshow");
+      document.body.classList.remove("unshadow");
     });
   };
 
@@ -178,8 +184,6 @@ function productPopUp() {
   const creatProductCard = (obj) => {
     const popUpItem = document.querySelector(".popup__product");
 
-    console.log(obj)
-
     const card = {
       img: obj.querySelector(".product__item-img>img").src,
       name: obj.querySelector(".product__item-title>span").innerText,
@@ -188,11 +192,12 @@ function productPopUp() {
     };
 
     const popUpLayout = `
-         <div class="popup__item-img">
-            <img src="${card.img}" onerror="this.style.display='none'" alt="">
-          </div>
-
-          <div class="popup__title-price">
+    
+    <div class="popup__item-img">
+    <img src="${card.img}" onerror="this.style.display='none'" alt="">
+    </div>
+    
+    <div class="popup__title-price">
             <h3 class="popup__item-name">${card.name}</h3>
             <p class="popup__item-price">${card.price}</p>        
           </div>

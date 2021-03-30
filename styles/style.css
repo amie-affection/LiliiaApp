@@ -499,6 +499,10 @@ button {
   transform: translateX(5%);
 }
 
+.body__after.unshow::after {
+  content: none;
+}
+
 .bottom__menu::after {
   position: static;
   bottom: -1.1rem;
@@ -563,6 +567,10 @@ button {
   font-size: var(--mainSize);
   line-height: 1.75rem;
 }
+
+/* .slider__description-card {
+  display: none;
+} */
 
 .slider__information {
   position: absolute;
@@ -751,7 +759,7 @@ button {
 
 .modal__window-img {
   position: absolute;
-  top: 20%;
+  top: 24%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -759,11 +767,10 @@ button {
 .modal__window-img > img {
   object-fit: cover;
   object-position: bottom;
-
 }
 
 .modal__close {
-  top: 8%;
+  top: 14%;
   right: 10%;
 }
 
@@ -783,11 +790,11 @@ button {
 }
 
 .modal__title {
-  top: 56%;
+  top: 58%;
 }
 
 .modal__description {
-  top: 66%;
+  top: 68%;
 }
 
 /* medias========================================================================================= */
@@ -869,11 +876,11 @@ button {
 
 @media (min-width: 414px) {
   .modal__title {
-    top: 50%;
+    top: 54%;
   }
 
   .modal__description {
-    top: 58%;
+    top: 64%;
   }
 
   .popup__title-price {
@@ -926,11 +933,11 @@ button {
 
 @media (min-height: 800px) {
   .modal__title {
-    top: 48%;
+    top: 50%;
   }
 
   .modal__description {
-    top: 58%;
+    top: 60%;
   }
 
   .popup {
@@ -1014,6 +1021,10 @@ button {
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
   }
 
+  body.unshadow {
+    box-shadow: none;
+  }
+
   .header {
     position: sticky;
     width: var(--fullWidth);
@@ -1066,8 +1077,8 @@ button {
   }
 
   .modal__window {
-    max-width: 29rem;
-    height: 97%;
+    max-width: 30rem;
+    height: 96.4%;
     border-radius: 1rem;
   }
 
